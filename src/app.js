@@ -9,7 +9,7 @@ window.onload = function() {
   let value = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"];
   let palo = ["♦", "♥", "♠", "♣"];
 
-  // Función para generar una nueva carta
+  // función  nueva carta
   const generateCard = () => {
     // Random number
     let randomValue = Math.floor(Math.random() * value.length);
@@ -35,14 +35,14 @@ window.onload = function() {
     };
     assignColor(palo[randomPalo]);
 
-    // Rotar el palo de abajo
+    // palo hacia abajo
     document.querySelector("#paloDown").classList.add("rotated");
   };
 
-  // Generar la primera carta al cargar la página
+  // Generar carta
   generateCard();
 
-  // Evento para generar nueva carta al hacer clic en el botón
+  // botón para generar nueva carta
   document
     .querySelector("#generateCard")
     .addEventListener("click", generateCard);
